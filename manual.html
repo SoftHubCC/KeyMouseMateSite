@@ -109,32 +109,32 @@
     <a href="#s1" class="active">1. 快速入门</a>
     <a href="#s2">2. 三层模型</a>
     <a href="#s3">3. 界面布局</a>
-    <a href="#s3-5">3.5 典型场景示例</a>
+    <a href="#s4">4 典型场景示例</a>
 
     <h3>动作</h3>
-    <a href="#s4">4. 动作类型全解</a>
-    <a href="#s5">5. 执行次数</a>
-    <a href="#s6">6. 条件分支与工作流</a>
+    <a href="#s5">5. 动作类型全解</a>
+    <a href="#s6">6. 执行次数</a>
+    <a href="#s7">7. 条件分支与工作流</a>
 
     <h3>高级</h3>
-    <a href="#s7">7. 变量与表达式</a>
-    <a href="#s8">8. OCR 识别</a>
-    <a href="#s9">9. 监控规则</a>
-    <a href="#s10">10. 定时调度（Cron）</a>
+    <a href="#s8">8. 变量与表达式</a>
+    <a href="#s9">9. OCR 识别</a>
+    <a href="#s10">10. 监控规则</a>
+    <a href="#s11">11. 定时调度（Cron）</a>
 
     <h3>实用功能</h3>
-    <a href="#s11">11. 热键</a>
-    <a href="#s12">12. 密码管理</a>
-    <a href="#s13">13. 坐标追踪</a>
-    <a href="#s14">14. 数据管理</a>
-    <a href="#s15">15. 效果叠加（执行回显）</a>
-    <a href="#s15-5">16. 实时可视化</a>
-    <a href="#s16">17. 托盘与关闭行为</a>
+    <a href="#s12">12. 热键</a>
+    <a href="#s13">13. 密码管理</a>
+    <a href="#s14">14. 坐标追踪</a>
+    <a href="#s15">15. 数据管理</a>
+    <a href="#s16">16. 效果叠加（执行回显）</a>
+    <a href="#s17">17. 实时可视化</a>
+    <a href="#s18">18. 托盘与关闭行为</a>
 
     <h3>其他</h3>
-    <a href="#s17">18. 迁移旧方案</a>
-    <a href="#s18">19. 常见问题</a>
-    <a href="#s19">20. 目录结构与数据布局</a>
+    <a href="#s19">19. 迁移旧方案</a>
+    <a href="#s20">20. 常见问题</a>
+    <a href="#s21">21. 目录结构与数据布局</a>
   </aside>
 
   <main class="content">
@@ -306,9 +306,9 @@
 </ul>
 </section>
 
-<!-- ===================== 3.5 典型场景示例 ===================== -->
-<section id="s3-5">
-<h2>3.5 典型场景示例</h2>
+<!-- ===================== 4 典型场景示例 ===================== -->
+<section id="s4">
+<h2>4. 典型场景示例</h2>
 
 <h3>示例一：自动登录网页</h3>
 <p>场景：打开浏览器，自动填写用户名密码并登录。</p>
@@ -365,11 +365,11 @@
   关联方案：每日巡检</code></pre>
 </section>
 
-<!-- ===================== 4. 动作类型全解 ===================== -->
-<section id="s4">
-<h2>4. 动作类型全解</h2>
+<!-- ===================== 5. 动作类型全解 ===================== -->
+<section id="s5">
+<h2>5. 动作类型全解</h2>
 
-<h3>4.1 鼠标类</h3>
+<h3>5.1 鼠标类</h3>
 <table>
   <tr><th>动作</th><th>参数</th><th>说明</th></tr>
   <tr><td>左键单击</td><td>区域（左上X / 上Y / 右下X / 下Y）</td><td>点击单个点（区域宽高为0）</td></tr>
@@ -380,7 +380,7 @@
   <tr><td>滚轮滚动</td><td>X,Y + 方向(up/down) + 格数</td><td>先移动到坐标，再滚动鼠标滚轮 N 格（网页/列表翻页）</td></tr>
 </table>
 
-<h3>4.2 输入类</h3>
+<h3>5.2 输入类</h3>
 <table>
   <tr><th>动作</th><th>参数</th><th>说明</th></tr>
   <tr><td>输入文本</td><td>X,Y + 文本 + 先清空 + 密码库</td><td>点击坐标获得焦点后粘贴文本；支持 <code>{变量}</code> 模板；选密码库自动取明文</td></tr>
@@ -398,7 +398,7 @@
   <tr><td>按键</td><td>键名</td><td>模拟按键，如 <code>enter</code>、<code>ctrl+c</code>、<code>alt+f4</code>、<code>f5</code> 等</td></tr>
 </table>
 
-<h3>4.3 等待类</h3>
+<h3>5.3 等待类</h3>
 <table>
   <tr><th>动作</th><th>参数</th><th>说明</th></tr>
   <tr><td>等待</td><td>时长（秒）</td><td>固定等待，可被暂停/停止打断</td></tr>
@@ -408,7 +408,7 @@
   <tr><td>随机延迟</td><td>基准时长（秒）</td><td>在基准时长的 50%~150% 之间随机等待，比固定等待更自然</td></tr>
 </table>
 
-<h3>4.4 OCR 类</h3>
+<h3>5.4 OCR 类</h3>
 <table>
   <tr><th>动作</th><th>参数</th><th>说明</th></tr>
   <tr><td>OCR识别</td><td>区域 + 关键词 + 匹配模式 + 存变量 + 跳转</td><td>单次识别；命中/未命中可分别跳转到节点内第 N 个动作</td></tr>
@@ -419,14 +419,14 @@
   <li><code>全部（AND）</code>：所有关键词都出现才成功</li>
 </ul>
 
-<h3>4.5 流程控制类</h3>
+<h3>5.5 流程控制类</h3>
 <table>
   <tr><th>动作</th><th>参数</th><th>说明</th></tr>
   <tr><td>跳转</td><td>目标序号 N</td><td>跳到节点内第 N 个动作（向后跳=循环）</td></tr>
   <tr><td>设置变量</td><td>名称 + 值</td><td>创建 <code>{变量.名称}</code>；值支持 <code>{变量}</code> 模板、数字、true/false</td></tr>
 </table>
 
-<h3>4.6 系统类</h3>
+<h3>5.6 系统类</h3>
 <table>
   <tr><th>动作</th><th>参数</th><th>说明</th></tr>
   <tr><td>打开文件</td><td>路径</td><td>打开文件或启动程序</td></tr>
@@ -437,7 +437,7 @@
   <tr><td>写文件</td><td>目标文件 + 写入内容（{变量} 模板）</td><td>追加一行到文件末尾，自动加时间戳前缀；配合变量可记录每轮处理轨迹</td></tr>
 </table>
 
-<h3>4.7 新增动作详解与典型场景</h3>
+<h3>5.7 新增动作详解与典型场景</h3>
 <p>下面对近期新增的 13 种动作（动作总数已达 33 种）展开说明主要用法与应用场景，参数速查见上文 4.1～4.6 各表。</p>
 <table>
   <tr><th>动作</th><th>怎么用</th><th>典型场景</th></tr>
@@ -473,9 +473,9 @@
 </table>
 </section>
 
-<!-- ===================== 5. 执行次数 ===================== -->
-<section id="s5">
-<h2>5. 执行次数</h2>
+<!-- ===================== 6. 执行次数 ===================== -->
+<section id="s6">
+<h2>6. 执行次数</h2>
 <p>所有动作类型均支持<strong>执行次数</strong>（<code>loop_count</code>），默认 1 次。</p>
 
 <h3>设置位置</h3>
@@ -493,11 +493,11 @@
 </ul>
 </section>
 
-<!-- ===================== 6. 条件分支与工作流 ===================== -->
-<section id="s6">
-<h2>6. 条件分支与工作流</h2>
+<!-- ===================== 7. 条件分支与工作流 ===================== -->
+<section id="s7">
+<h2>7. 条件分支与工作流</h2>
 
-<h3>6.1 步骤级条件</h3>
+<h3>7.1 步骤级条件</h3>
 <p>每个步骤可设置执行条件，决定该步骤是否运行：</p>
 <table>
   <tr><th>条件类型</th><th>说明</th></tr>
@@ -514,7 +514,7 @@
   <li><strong>终止方案</strong>：方案停止，状态显示"已完成"</li>
 </ul>
 
-<h3>6.2 动作出错处理</h3>
+<h3>7.2 动作出错处理</h3>
 <table>
   <tr><th>策略</th><th>说明</th></tr>
   <tr><td>继续</td><td>记录日志，执行下一个动作（默认）</td></tr>
@@ -523,7 +523,7 @@
   <tr><td>中止方案</td><td>停止整个方案</td></tr>
 </table>
 
-<h3>6.3 动作级跳转（节点内）</h3>
+<h3>7.3 动作级跳转（节点内）</h3>
 <p><code>OCR识别</code> 和 <code>跳转</code> 动作支持节点内跳转：</p>
 <ul>
   <li><strong>命中→跳转</strong>：OCR 命中后跳到节点内第 N 个动作</li>
@@ -532,11 +532,11 @@
 </ul>
 </section>
 
-<!-- ===================== 7. 变量与表达式 ===================== -->
-<section id="s7">
-<h2>7. 变量与表达式</h2>
+<!-- ===================== 8. 变量与表达式 ===================== -->
+<section id="s8">
+<h2>8. 变量与表达式</h2>
 
-<h3>7.1 内置变量</h3>
+<h3>8.1 内置变量</h3>
 <table>
   <tr><th>变量</th><th>含义</th></tr>
   <tr><td><code>{轮次}</code></td><td>当前节点循环第几轮（1 基）</td></tr>
@@ -550,35 +550,35 @@
   <tr><td><code>{变量.xxx}</code></td><td>用户通过「设置变量」动作创建的变量</td></tr>
 </table>
 
-<h3>7.2 表达式语法</h3>
+<h3>8.2 表达式语法</h3>
 <p>表达式用于步骤执行条件，<strong>不使用 eval</strong>，安全受限：</p>
 <p><strong>运算符</strong>：<code>==</code> <code>!=</code> <code>&gt;</code> <code>&lt;</code> <code>&gt;=</code> <code>&lt;=</code> <code>contains</code> <code>matches</code> <code>startswith</code> <code>endswith</code> <code>and</code> <code>or</code> <code>not</code></p>
 <p><strong>matches</strong> 支持正则：右侧用 <code>re:</code> 前缀</p>
 <pre><code>{ocr.last} matches 're:错误代码:\s*\d+'</code></pre>
 
-<h3>7.3 示例</h3>
+<h3>8.3 示例</h3>
 <pre><code>{变量.已登录} == true
 {ocr.last} contains '成功'
 {轮次} &gt; 3 and {变量.停止} != true
 {ocr.last} matches 're:订单号:\s*\w+'</code></pre>
 
-<h3>7.4 模板替换</h3>
+<h3>8.4 模板替换</h3>
 <p>在「输入文本」「按键」「打开文件」「设置变量」的值中可写 <code>{变量名}</code>，执行时自动替换；未知变量原样保留，不报错。</p>
 </section>
 
-<!-- ===================== 8. OCR 识别 ===================== -->
-<section id="s8">
-<h2>8. OCR 识别</h2>
+<!-- ===================== 9. OCR 识别 ===================== -->
+<section id="s9">
+<h2>9. OCR 识别</h2>
 
-<h3>8.1 双引擎</h3>
+<h3>9.1 双引擎</h3>
 <table>
-  <tr><th>引擎</th><th>说明</th></tr>
-  <tr><td><strong>RapidOCR</strong>（默认）</td><td>PP-OCR 模型，中文准确率高，体积小巧，开箱即用</td></tr>
-  <tr><td>PaddleOCR（可选）</td><td>识别上限略高，适合对复杂版面要求高的场景</td></tr>
+  <tr><th>引擎</th><th>依赖</th><th>特点</th></tr>
+  <tr><td><strong>RapidOCR</strong>（默认）</td><td><code>rapidocr-onnxruntime</code>（已装）</td><td>PP-OCR 模型，中文准确率高，体积小巧，开箱即用</td></tr>
+  <tr><td>PaddleOCR（可选）</td><td><code>pip install paddlepaddle paddleocr</code></td><td>上限略高，适合对复杂版面要求高的场景，不支持 Win7</td></tr>
 </table>
 <p><code>auto</code> 模式：优先 RapidOCR，失败时自动回退到 PaddleOCR。</p>
 
-<h3>8.2 OCR 设置</h3>
+<h3>9.2 OCR 设置</h3>
 <p>菜单「工具 → OCR 设置」：</p>
 <ul>
   <li><strong>引擎切换</strong>：RapidOCR / PaddleOCR / auto</li>
@@ -587,22 +587,22 @@
   <li><strong>区域测试</strong>：选择区域 → 点击"测试识别"，查看识别文本和置信度</li>
 </ul>
 
-<h3>8.3 小区域放大</h3>
+<h3>9.3 小区域放大</h3>
 <p>自动检测：识别区域过小时（&lt; 200px 宽或高），自动放大 1.5~2 倍再识别，提高小文字识别率。</p>
 </section>
 
-<!-- ===================== 9. 监控规则 ===================== -->
-<section id="s9">
-<h2>9. 监控规则（弹窗处理）</h2>
+<!-- ===================== 10. 监控规则 ===================== -->
+<section id="s10">
+<h2>10. 监控规则（弹窗处理）</h2>
 
-<h3>9.1 工作原理</h3>
+<h3>10.1 工作原理</h3>
 <p>监控规则在<strong>后台线程</strong>运行，与主流程完全独立：</p>
 <div class="diagram">主流程：步骤1 → 动作A → 动作B → 动作C → ...
                               ↑
 监控线程在每个动作之间检查点触发
 命中关键词 → 执行处理节点 → 回到打断处继续（不重跑方案）</div>
 
-<h3>9.2 创建监控规则</h3>
+<h3>10.2 创建监控规则</h3>
 <p>菜单「工具 → 监控规则」→ 新建：</p>
 <table>
   <tr><th>参数</th><th>说明</th></tr>
@@ -614,7 +614,7 @@
   <tr><td>处理节点</td><td>命中后执行的节点名（处理类型=执行节点时）</td></tr>
 </table>
 
-<h3>9.3 典型场景：批量提交 + 弹窗处理</h3>
+<h3>10.3 典型场景：批量提交 + 弹窗处理</h3>
 <div class="diagram">步骤1（无限循环）：批量选中提交
   ├─ 点击[选中]按钮
   ├─ 等待 0.5s
@@ -629,7 +629,7 @@
   关键词：确认,确定,是否
   处理器：节点「处理-确认弹窗」（点击[取消]）</div>
 
-<h3>9.4 调试技巧</h3>
+<h3>10.4 调试技巧</h3>
 <ol>
   <li>打开「OCR 调试日志」，日志中出现 <code>🔍 [规则名] OCR: ...</code> 查看识别内容</li>
   <li>在节点中添加 <code>ocr_check</code> 动作，将识别全文存入变量并截图到桌面，确认区域是否正确</li>
@@ -637,15 +637,15 @@
 </ol>
 </section>
 
-<!-- ===================== 10. 定时调度 ===================== -->
-<section id="s10">
-<h2>10. 定时调度（Cron）</h2>
+<!-- ===================== 11. 定时调度 ===================== -->
+<section id="s11">
+<h2>11. 定时调度（Cron）</h2>
 
-<h3>10.1 创建调度</h3>
+<h3>11.1 创建调度</h3>
 <p>菜单「工具 → 定时调度」→ 新建：</p>
 <p>调度包含：Cron 表达式（7 字段：秒 分 时 日 月 周 年）、启动延迟、关联方案、调度名称。</p>
 
-<h3>10.2 Cron 表达式速查</h3>
+<h3>11.2 Cron 表达式速查</h3>
 <table>
   <tr><th>字段</th><th>示例</th><th>含义</th></tr>
   <tr><td>秒</td><td><code>0</code></td><td>每分钟的第 0 秒</td></tr>
@@ -657,7 +657,7 @@
   <tr><td>年</td><td><code>*</code></td><td>每年</td></tr>
 </table>
 
-<h3>10.3 高级语法</h3>
+<h3>11.3 高级语法</h3>
 <table>
   <tr><th>语法</th><th>示例</th><th>含义</th></tr>
   <tr><td><code>*</code></td><td><code>*/15 * * * *</code></td><td>每 15 秒</td></tr>
@@ -669,7 +669,7 @@
   <tr><td><code>#N</code></td><td><code>0 0 * * 6#2</code></td><td>每月第二个周六</td></tr>
 </table>
 
-<h3>10.4 运行状态</h3>
+<h3>11.4 运行状态</h3>
 <ul>
   <li>调度器在后台精确等待下次触发时刻（非轮询），到达时自动运行关联方案。</li>
   <li>托盘图标和日志显示调度状态。</li>
@@ -677,11 +677,10 @@
 </ul>
 </section>
 
-<!-- ===================== 11. 热键 ===================== -->
-<section id="s11">
-<h2>11. 热键</h2>
-
-<h3>11.1 默认热键</h3>
+<!-- ===================== 12. 热键 ===================== -->
+<section id="s12">
+<h2>12. 热键</h2>
+<h3>12.1 主程序热键（默认）</h3>
 <table>
   <tr><th>功能</th><th>默认</th></tr>
   <tr><td>开始运行 / 从暂停继续</td><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>S</kbd></td></tr>
@@ -690,24 +689,34 @@
   <tr><td>坐标追踪（起点/区域）</td><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd></td></tr>
   <tr><td>坐标追踪（终点/拖动结束点）</td><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>X</kbd></td></tr>
 </table>
-
-<h3>11.2 修改热键</h3>
-<p>菜单「工具 → 热键设置」→ 选择功能 → 点击"录制" → 按下新的组合键 → 保存。</p>
-
-<h3>11.3 追踪热键详解</h3>
-<p><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd> 是<strong>三阶段</strong>追踪：</p>
-<ol>
-  <li>第一次按下：开始追踪<strong>左上角</strong>（按钮文字显示"追踪左上角"）</li>
-  <li>第二次按下：切换到追踪<strong>右下角</strong>（按钮文字显示"追踪右下角"）</li>
-  <li>第三次按下：锁定当前坐标（按钮文字显示"已锁定"）</li>
-</ol>
-<p>适用于：动作编辑坐标、步骤 OCR 条件区域、监控规则区域、OCR 设置测试区域。</p>
-<p><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>X</kbd> 仅用于<strong>拖动动作的终点</strong>追踪。</p>
+<h3>12.2 可视化热键（默认）</h3>
+<table>
+  <tr><th>功能</th><th>默认</th></tr>
+  <tr><td>切换鼠标高亮</td><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>1</kbd></td></tr>
+  <tr><td>切换点击效果</td><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>2</kbd></td></tr>
+  <tr><td>切换按键显示</td><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>3</kbd></td></tr>
+  <tr><td>切换鼠标坐标</td><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>4</kbd></td></tr>
+  <tr><td>切换聚光灯</td><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>5</kbd></td></tr>
+  <tr><td>切换放大镜</td><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>6</kbd></td></tr>
+  <tr><td>切换浮动工具栏</td><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>`</kbd></td></tr>
+  <tr><td>调整透明度 − / +</td><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>-</kbd> / <kbd>=</kbd></td></tr>
+  <tr><td>打开可视化设置</td><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>F1</kbd></td></tr>
+</table>
+<h3>12.3 修改热键（手工输入）</h3>
+<p>菜单「工具 → 热键设置」，对话框内分<strong>主程序</strong>与<strong>可视化</strong>两个分组：</p>
+<ul>
+  <li><strong>直接键入</strong>组合键（如 <code>ctrl+shift+s</code>），无需录制。</li>
+  <li>保存时自动<strong>归一化校验</strong>：小写化、修饰键别名归一、分隔符统一 <code>+</code>、去重；非法格式红字提示。</li>
+  <li>「<strong>恢复默认</strong>」一键回填。</li>
+  <li>保存后<strong>立即重新注册生效</strong>，无需重启。</li>
+</ul>
+<h3>12.4 追踪热键详解</h3>
+<p><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd> 是<strong>三阶段</strong>追踪：①开始追踪左上角 ②切换追踪右下角 ③锁定坐标。适用于动作编辑坐标、步骤 OCR 条件区域、监控规则区域、OCR 设置测试区域。<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>X</kbd> 仅用于<strong>拖动动作的终点</strong>。</p>
 </section>
 
-<!-- ===================== 12. 密码管理 ===================== -->
-<section id="s12">
-<h2>12. 密码管理</h2>
+<!-- ===================== 13. 密码管理 ===================== -->
+<section id="s13">
+<h2>13. 密码管理</h2>
 <p>菜单「工具 → 密码管理」：</p>
 <ul>
   <li><strong>添加</strong>：输入名称和明文密码 → 加密存储到 <code>userdata/passwords.db</code></li>
@@ -717,11 +726,11 @@
 <p>执行时程序自动：①从数据库取出明文 ②粘贴到目标位置 ③清空剪贴板（防止泄露）④日志中显示 <code>*****</code>（打码，不显示实际密码）。</p>
 </section>
 
-<!-- ===================== 13. 坐标追踪 ===================== -->
-<section id="s13">
-<h2>13. 坐标追踪</h2>
+<!-- ===================== 14. 坐标追踪 ===================== -->
+<section id="s14">
+<h2>14. 坐标追踪</h2>
 
-<h3>13.1 追踪区域（Ctrl+Shift+C）</h3>
+<h3>14.1 追踪区域（Ctrl+Shift+C）</h3>
 <p>适用于所有需要坐标的位置：动作的左上角/右下角、步骤 OCR 条件区域、监控规则区域、OCR 设置测试区域。</p>
 <ol>
   <li>在坐标输入框中点击"追踪区域"按钮（或按 <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd>）</li>
@@ -730,26 +739,26 @@
   <li>按钮文字实时显示当前阶段（追踪左上角 / 追踪右下角 / 已锁定）</li>
 </ol>
 
-<h3>13.2 追踪终点（Ctrl+Shift+X）</h3>
+<h3>14.2 追踪终点（Ctrl+Shift+X）</h3>
 <p>用于拖动动作的终点：移动鼠标到目标位置，按 <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>X</kbd> 锁定，起点不受影响。</h3>
 
-<h3>13.3 独立追踪</h3>
+<h3>14.3 独立追踪</h3>
 <p>两个按钮独立追踪，可同时追踪起点和终点而不互相干扰。</p>
 </section>
 
-<!-- ===================== 14. 数据管理 ===================== -->
-<section id="s14">
-<h2>14. 数据管理：新建 / 复制 / 重命名 / 删除</h2>
+<!-- ===================== 15. 数据管理 ===================== -->
+<section id="s15">
+<h2>15. 数据管理：新建 / 复制 / 重命名 / 删除</h2>
 
-<h3>14.1 新建</h3>
+<h3>15.1 新建</h3>
 <table>
   <tr><th>对象</th><th>说明</th></tr>
-  <tr><td>动作</td><td>自动生成 action_id，保存到 <code>userdata/actions/</code> 目录</td></tr>
-  <tr><td>节点</td><td>自动生成 node_id，保存到 <code>userdata/nodes/</code> 目录</td></tr>
-  <tr><td>方案</td><td>自动生成 plan_id，保存到 <code>userdata/plans/</code> 目录</td></tr>
+  <tr><td>动作</td><td>自动生成 action_id，保存到 <code>userdata/actions/</code> 目录，userdata/actions/<名>.json</td></tr>
+  <tr><td>节点</td><td>自动生成 node_id，保存到 <code>userdata/nodes/</code> 目录，userdata/nodes/<名>.json</td></tr>
+  <tr><td>方案</td><td>自动生成 plan_id，保存到 <code>userdata/plans/</code> 目录，userdata/plans/<名>.json</td></tr>
 </table>
 
-<h3>14.2 复制规则</h3>
+<h3>15.2 复制规则</h3>
 <table>
   <tr><th>复制对象</th><th>新 ID</th><th>原 ID</th><th>复制行为</th></tr>
   <tr><td>动作</td><td><strong>新</strong> action_id</td><td>原 action_id</td><td>完整复制所有字段（名称需修改）</td></tr>
@@ -757,22 +766,22 @@
   <tr><td>方案</td><td><strong>新</strong> plan_id</td><td>原 plan_id</td><td>复制所有步骤和监控规则</td></tr>
 </table>
 
-<h3>14.3 重命名</h3>
+<h3>15.3 重命名</h3>
 <ul>
   <li><strong>节点重命名</strong>：自动同步所有引用该节点的方案中的步骤（按 ID 与名称双匹配）。</li>
   <li><strong>动作重命名</strong>：旧文件自动删除，新名称文件写入。</li>
 </ul>
 
-<h3>14.4 删除</h3>
+<h3>15.4 删除</h3>
 <ul>
   <li>被引用的节点/动作/方案删除时会列出受影响对象并要求确认。</li>
   <li>方案删除后不影响节点和动作文件。</li>
 </ul>
 
-<h3>14.5 列设置</h3>
+<h3>15.5 列设置</h3>
 <p>所有表格（动作列表、节点列表、方案列表）均支持右键 →「列设置… 」：勾选显示/隐藏列，拖拽调整列宽，设置自动保存。</p>
 
-<h3>14.6 右键菜单操作</h3>
+<h3>15.6 右键菜单操作</h3>
 <p>除列设置外，各表格还根据上下文提供操作菜单：</p>
 <table>
   <tr><th>位置</th><th>菜单项</th><th>说明</th></tr>
@@ -787,9 +796,9 @@
 <p>部分菜单项可能需要先选中对应行才可用（显示为灰色）。</p>
 </section>
 
-<!-- ===================== 15. 效果叠加 ===================== -->
-<section id="s15">
-<h2>15. 效果叠加（执行回显）</h2>
+<!-- ===================== 16. 效果叠加 ===================== -->
+<section id="s16">
+<h2>16. 效果叠加（执行回显）</h2>
 <p>菜单「设置 → 效果设置」：运行方案时在主窗口上方叠加半透明视觉效果，<strong>由执行引擎触发</strong>，用于调试和观察执行状态：</p>
 <table>
   <tr><th>效果</th><th>说明</th></tr>
@@ -804,12 +813,12 @@
 </div>
 </section>
 
-<!-- ===================== 16. 实时可视化 ===================== -->
-<section id="s15-5">
-<h2>16. 实时可视化（键鼠可视化）</h2>
+<!-- ===================== 17. 实时可视化 ===================== -->
+<section id="s17">
+<h2>17. 实时可视化（键鼠可视化）</h2>
 <p>由独立工具 KeyMouseViz <strong>有机融合</strong>而来的内置模块（<code>rpa/viz.py</code>），随主程序启动常驻、随主程序退出关闭，无需管理员权限，支持高 DPI / 多显示器。</p>
 
-<h3>16.1 功能概览</h3>
+<h3>17.1 功能概览</h3>
 <table>
   <tr><th>功能</th><th>说明</th></tr>
   <tr><td><strong>鼠标高亮</strong></td><td>突出显示鼠标位置，演示/录屏时观众看得清</td></tr>
@@ -822,12 +831,12 @@
 </table>
 <p><strong>默认全部关闭</strong>，随程序启动常驻待命，按需开启。</p>
 
-<h3>16.2 开启方式（四处入口，状态实时同步）</h3>
+<h3>17.2 开启方式（四处入口，状态实时同步）</h3>
 <ol>
   <li><strong>菜单</strong>：设置 → ☑「启用浮动工具栏」/「设置可视化…」</li>
   <li><strong>托盘</strong>：托盘图标右键 →「可视化」子菜单（6 项开关 + 浮动工具栏）</li>
   <li><strong>浮动工具栏</strong>：点击图标开关对应功能</li>
-  <li><strong>热键</strong>：见 <a href="#s11">11.2 可视化热键</a></li>
+  <li><strong>热键</strong>：见 <a href="#s12">12.2 可视化热键</a></li>
 </ol>
 <p>任意一处切换，其余三处勾选状态<strong>即时同步</strong>。</p>
 <div class="callout tip">
@@ -835,10 +844,10 @@
   关闭前各功能开关状态（高亮/点击/键盘/坐标/聚光灯/放大镜/浮动工具栏）自动保存到 <code>config/config.json</code> 的 <code>viz</code> 段，重启后恢复原状态。
 </div>
 
-<h3>16.3 浮动工具栏</h3>
+<h3>17.3 浮动工具栏</h3>
 <p>屏幕悬浮工具条（默认屏幕右下角，可拖动），提供 6 个功能按钮：定位/高亮、点击效果、键盘、坐标、聚光灯、放大镜。图标为内置线条绘制；若 <code>config/floatbar/*.svg</code> 存在则优先使用 SVG。图标颜色可在可视化设置中分别调整。</p>
 
-<h3>16.4 设置可视化对话框</h3>
+<h3>17.4 设置可视化对话框</h3>
 <p>菜单「设置 → 设置可视化…」或热键 <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>F1</kbd> 打开：</p>
 <table>
   <tr><th>分组</th><th>主要设置</th></tr>
@@ -853,7 +862,7 @@
 </table>
 <div class="callout info"><strong>ℹ 热键统一管理</strong>快捷键已并入主程序「工具 → 热键设置」（可视化分组），本对话框不再单独编辑热键。</div>
 
-<h3>16.5 与「效果叠加」的区别</h3>
+<h3>17.5 与「效果叠加」的区别</h3>
 <table>
   <tr><th></th><th>效果叠加（15 章）</th><th>实时可视化（本章）</th></tr>
   <tr><td>触发方式</td><td>方案执行时由引擎触发</td><td>实时监听真实的键鼠操作</td></tr>
@@ -863,11 +872,11 @@
 <p>两者相互独立、可同时使用。</p>
 </section>
 
-<!-- ===================== 16. 托盘与关闭行为 ===================== -->
-<section id="s16">
-<h2>17. 托盘与关闭行为</h2>
+<!-- ===================== 18. 托盘与关闭行为 ===================== -->
+<section id="s18">
+<h2>18. 托盘与关闭行为</h2>
 
-<h3>17.1 托盘图标</h3>
+<h3>18.1 托盘图标</h3>
 <p>启动后系统托盘出现程序图标，右键菜单：</p>
 <ul>
   <li><strong>显示主窗口</strong>：恢复主窗口</li>
@@ -878,7 +887,7 @@
   <li><strong>彻底退出</strong>：直接退出程序（可视化模块一并停止）</li>
 </ul>
 
-<h3>17.2 关闭行为</h3>
+<h3>18.2 关闭行为</h3>
 <p>点击窗口 X 按钮时，可配置行为（首次询问，可勾选"记住选择"）：</p>
 <table>
   <tr><th>行为</th><th>说明</th></tr>
@@ -888,9 +897,9 @@
 </table>
 </section>
 
-<!-- ===================== 17. 迁移旧方案 ===================== -->
-<section id="s17">
-<h2>18. 迁移旧方案</h2>
+<!-- ===================== 19. 迁移旧方案 ===================== -->
+<section id="s19">
+<h2>19. 迁移旧方案</h2>
 <p>菜单「方案 → 迁移旧方案」：</p>
 <p>扫描旧版 <code>schemes/</code> 目录，自动转换：</p>
 <ul>
@@ -902,29 +911,29 @@
 <p><strong>幂等</strong>：已存在的同名内容自动跳过，可重复执行。</p>
 </section>
 
-<!-- ===================== 18. 常见问题 ===================== -->
-<section id="s18">
-<h2>19. 常见问题</h2>
+<!-- ===================== 20. 常见问题 ===================== -->
+<section id="s20">
+<h2>20. 常见问题</h2>
 
-<h3>19.1 首次运行安全警告</h3>
+<h3>20.1 首次运行安全警告</h3>
 <p>Windows SmartScreen 可能提示"未知发布者"，点击「更多信息 → 仍要运行」即可。</p>
 
-<h3>19.2 OCR 识别中文差</h3>
+<h3>20.2 OCR 识别中文差</h3>
 <p>进入「工具 → OCR 设置」，将引擎切换为<strong>RapidOCR</strong>（默认引擎，中文效果最佳）。</p>
 
-<h3>19.3 坐标不准确</h3>
+<h3>20.3 坐标不准确</h3>
 <p>可能是 DPI 缩放导致。请右键 <code>KeyMouseMate.exe</code> → 属性 → 兼容性 → 更改高 DPI 设置 → 勾选「替代高 DPI 缩放行为」，由<strong>应用程序</strong>控制。</p>
 
-<h3>19.4 修改后不生效</h3>
+<h3>20.4 修改后不生效</h3>
 <p>关闭程序，重新打开即可。若涉及共享节点，注意其他方案引用该节点时也会同步更新。</p>
 
-<h3>19.5 打包后样式与原版不同</h3>
+<h3>20.5 打包后样式与原版不同</h3>
 <p>这是正常现象，程序已内置 Fusion 样式，确保在任何 Windows 环境下外观一致。</p>
 </section>
 
-<!-- ===================== 19. 目录结构 ===================== -->
-<section id="s19">
-<h2>20. 目录结构与数据布局</h2>
+<!-- ===================== 21. 目录结构 ===================== -->
+<section id="s21">
+<h2>21. 目录结构与数据布局</h2>
 <p>程序目录分为两大块：<strong>程序设置</strong>（<code>config/</code>）与<strong>使用数据</strong>（<code>userdata/</code>）。打包后均位于 EXE 同级；源码模式下为项目根目录：</p>
 
 <div class="tree"><span class="dir">应用根目录/</span>
@@ -943,7 +952,7 @@
     ├── <span class="dir">actions/</span>                <span class="comment"># 共享动作文件</span>
     └── <span class="dir">logs/</span>                   <span class="comment"># 运行日志</span></div>
 
-<h3>20.1 旧版自动迁移</h3>
+<h3>21.1 旧版自动迁移</h3>
 <p>首次启动检测到旧布局时自动迁移，无需手动操作（旧文件保留 <code>.bak</code> 备份）：</p>
 <ul>
   <li><code>userdata/config/config.json</code> → <code>config/config.json</code></li>
@@ -952,13 +961,13 @@
   <li>config.json 中的 <code>plan_order</code> / <code>node_order</code> / <code>default_plan</code> → <code>userdata/data.json</code></li>
 </ul>
 
-<h3>20.2 备份与迁移</h3>
+<h3>21.2 备份与迁移</h3>
 <ul>
   <li><strong>完整备份</strong>：同时复制 <code>config/</code> 与 <code>userdata/</code> 两个文件夹。</li>
   <li><strong>只备数据</strong>：复制 <code>userdata/</code>（方案/节点/动作/密码/排序全部在内）。</li>
 </ul>
 
-<h3>20.3 二维码</h3>
+<h3>21.3 二维码</h3>
 <p>「帮助 → 关于」的二维码图片按顺序查找：<code>config/qrcode.png</code> → EXE 同目录 → 程序目录。将图片命名为 <code>qrcode.png</code> 放入 <code>config/</code> 即可显示。</p>
 
 <div class="callout info">
