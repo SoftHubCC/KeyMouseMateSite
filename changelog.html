@@ -235,13 +235,43 @@
 
   <main class="timeline">
 
+    <!-- ================= 2.1.26261.0630 ================= -->
+    <article class="release is-latest" id="2-1-26261.0630">
+      <div class="release-card">
+        <div class="release-head">
+          <h2 class="version"><a href="#2-1-26261.0630">2.1.26261.0630</a></h2>
+          <time class="date" datetime="2026-09-18">2026-09-18</time>
+          <span class="tag-latest">最新</span>
+        </div>
+
+        <section class="group" data-cat="added">
+          <h3 class="group-title">新增</h3>
+          <ul>
+            <li>新增 rpa/dpiutil.py 高 DPI 坐标换算统一模块：物理↔逻辑逐屏换算（EnumDisplayMonitors + QScreen.devicePixelRatioF，支持多屏混合缩放），提供 phys_to_logical / logical_to_phys / screen_scale_at_phys / physical_bounds / refresh_caches</li>
+          </ul>
+        </section>
+
+        <section class="group" data-cat="fixed">
+          <h3 class="group-title">修复</h3>
+          <ul>
+            <li>修复高 DPI（150%/200%）下可视化模块坐标偏移：鼠标高亮/点击效果/轨迹/聚光灯/放大镜统一经 dpiutil 物理→逻辑换算后绘制，不再错位 1.5 倍</li>
+            <li>修复放大镜截屏源区域：物理截屏源边长按该屏缩放比换算（magnifier_size 为逻辑像素），混合缩放下放大倍率不再漂移、看到的桌面范围正确</li>
+            <li>修复键盘/鼠标坐标"自定义位置"观感与设定值不符：自定义 X/Y 统一按物理像素语义解释（与鼠标坐标显示一致），绘制前转逻辑坐标</li>
+            <li>修复浮动工具栏在 150% 缩放下飘出屏幕外不可见：显示时按主屏可用区钳制位置，旧的低 DPI 保存值自动贴回右下角</li>
+            <li>修复托盘右键菜单在高分屏放大 200% 时位置错乱：弃用 QSystemTrayIcon.setContextMenu（高 DPI 定位有偏移 bug），改为右键时手动 menu.popup(QCursor.pos())</li>
+            <li>修复主窗口点击效果层（涟漪/光晕/键盘提示）在全局逻辑坐标绘制未减 widget 偏移导致副屏错位</li>
+            <li>修复多屏混合缩放下放大层跟屏判定：放大镜跟随用逻辑坐标 contains 逻辑 geometry，跨屏不再错</li>
+          </ul>
+        </section>
+      </div>
+    </article>
+
     <!-- ================= 2.1.26259.1324 ================= -->
-    <article class="release is-latest" id="2-1-26259.1324">
+    <article class="release" id="2-1-26259.1324">
       <div class="release-card">
         <div class="release-head">
           <h2 class="version"><a href="#2-1-26259.1324">2.1.26259.1324</a></h2>
           <time class="date" datetime="2026-09-16">2026-09-16</time>
-          <span class="tag-latest">最新</span>
         </div>
 
         <section class="group" data-cat="fixed">

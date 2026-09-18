@@ -1,9 +1,9 @@
 {
-  "version": "2.1.26259.1324",
+  "version": "2.1.26261.0630",
   "download_urls": {
-    "installer": "https://github.com/SoftHubCC/KeyMouseMateSite/releases/download/v2.1.26259.1324/KeyMouseMate_installer_v2.1.26259.1324.exe",
-    "portable": "https://github.com/SoftHubCC/KeyMouseMateSite/releases/download/v2.1.26259.1324/KeyMouseMate_portable_v2.1.26259.1324.zip"
+    "installer": "https://github.com/SoftHubCC/KeyMouseMateSite/releases/download/v2.1.26261.0630/KeyMouseMate_installer_v2.1.26261.0630.exe",
+    "portable": "https://github.com/SoftHubCC/KeyMouseMateSite/releases/download/v2.1.26261.0630/KeyMouseMate_portable_v2.1.26261.0630.zip"
   },
-  "changelog": "版本号生成逻辑优化：排除 rpa/__init__.py 的 mtime 干扰，修改该文件不再触发版本号无意义跳变",
-  "release_date": "2026-09-16"
+  "changelog": "新增 rpa/dpiutil.py 高 DPI 坐标换算统一模块：物理↔逻辑逐屏换算（EnumDisplayMonitors + QScreen.devicePixelRatioF，支持多屏混合缩放），提供 phys_to_logical / logical_to_phys / screen_scale_at_phys / physical_bounds / refresh_caches",
+  "release_date": "2026-09-18"
 }
