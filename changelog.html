@@ -235,11 +235,11 @@
 
   <main class="timeline">
 
-    <!-- ================= 2.1.26261.0630 ================= -->
-    <article class="release is-latest" id="2-1-26261.0630">
+    <!-- ================= 2.1.26261.2149 ================= -->
+    <article class="release is-latest" id="2-1-26261.2149">
       <div class="release-card">
         <div class="release-head">
-          <h2 class="version"><a href="#2-1-26261.0630">2.1.26261.0630</a></h2>
+          <h2 class="version"><a href="#2-1-26261.2149">2.1.26261.2149</a></h2>
           <time class="date" datetime="2026-09-18">2026-09-18</time>
           <span class="tag-latest">最新</span>
         </div>
@@ -259,8 +259,11 @@
             <li>修复键盘/鼠标坐标"自定义位置"观感与设定值不符：自定义 X/Y 统一按物理像素语义解释（与鼠标坐标显示一致），绘制前转逻辑坐标</li>
             <li>修复浮动工具栏在 150% 缩放下飘出屏幕外不可见：显示时按主屏可用区钳制位置，旧的低 DPI 保存值自动贴回右下角</li>
             <li>修复托盘右键菜单在高分屏放大 200% 时位置错乱：弃用 QSystemTrayIcon.setContextMenu（高 DPI 定位有偏移 bug），改为右键时手动 menu.popup(QCursor.pos())</li>
+            <li>修复托盘创建崩溃「托盘不可用」（QMenu(parent) 参数类型错误）：TrayController 是 QObject，原误用 QMenu(self) 把自身当父对象；QMenu 需 QWidget 父对象，改为用 __init__ 传入的主窗口 QWidget</li>
             <li>修复主窗口点击效果层（涟漪/光晕/键盘提示）在全局逻辑坐标绘制未减 widget 偏移导致副屏错位</li>
             <li>修复多屏混合缩放下放大层跟屏判定：放大镜跟随用逻辑坐标 contains 逻辑 geometry，跨屏不再错</li>
+            <li>修复 2880×1920 在 200% 缩放下鼠标效果仍错位（100% 正常、200% 偏移约 2 倍）：根因是 PerMonitorV2 叠加 AA_EnableHighDpiScaling 时 QScreen.devicePixelRatioF() 会误报缩放比（如 200% 屏报成 1.0）。dpiutil 不再信任 devicePixelRatioF，改为用「匹配到的 物理尺寸 ÷ 逻辑尺寸」实测比值作为有效缩放比，免疫 DPR 误报</li>
+            <li>修复启动崩溃（dpiutil._build_pairs 元组解包错误导致 refresh_caches 抛 ValueError，主窗口创建即中断）</li>
           </ul>
         </section>
       </div>
