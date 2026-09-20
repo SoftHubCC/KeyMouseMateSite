@@ -1,9 +1,9 @@
 {
-  "version": "2.1.26263.1029",
+  "version": "2.1.26263.1554",
   "download_urls": {
-    "installer": "https://github.com/SoftHubCC/KeyMouseMateSite/releases/download/v2.1.26263.1029/KeyMouseMate_installer_v2.1.26263.1029.exe",
-    "portable": "https://github.com/SoftHubCC/KeyMouseMateSite/releases/download/v2.1.26263.1029/KeyMouseMate_portable_v2.1.26263.1029.zip"
+    "installer": "https://github.com/SoftHubCC/KeyMouseMateSite/releases/download/v2.1.26263.1554/KeyMouseMate_installer_v2.1.26263.1554.exe",
+    "portable": "https://github.com/SoftHubCC/KeyMouseMateSite/releases/download/v2.1.26263.1554/KeyMouseMate_portable_v2.1.26263.1554.zip"
   },
-  "changelog": "修复「自动化执行」效果设置中键盘输入提示（文本显示）位置与设置值不符：固定 X/Y（物理像素）直接按逻辑像素绘制，150%/200% 缩放下被画到 X×缩放 处；现与鼠标涟漪/高亮一致，绘制前经 dpiutil 物理→逻辑换算；「跟随光标」分支（QCursor 逻辑坐标）不变",
+  "changelog": "修复「可视化设置」窗口底部留白：窗口高度改为按当前标签页的内容自适应（通用/鼠标各约 11 行、键盘 8 行、鼠标坐标 5 行，而聚光灯/放大镜只有 2~3 行），切换标签页时自动重算，短标签页不再继承长标签页的高度而在下方空出一大片；同时不再沿用历史保存的窗口高度（旧值偏矮会压扁属性行，偏高则留下空白）",
   "release_date": "2026-09-20"
 }

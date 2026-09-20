@@ -235,13 +235,89 @@
 
   <main class="timeline">
 
+    <!-- ================= 2.1.26263.1554 ================= -->
+    <article class="release is-latest" id="2-1-26263.1554">
+      <div class="release-card">
+        <div class="release-head">
+          <h2 class="version"><a href="#2-1-26263.1554">2.1.26263.1554</a></h2>
+          <time class="date" datetime="2026-09-20">2026-09-20</time>
+          <span class="tag-latest">最新</span>
+        </div>
+
+        <section class="group" data-cat="fixed">
+          <h3 class="group-title">修复</h3>
+          <ul>
+            <li>修复「可视化设置」窗口底部留白：窗口高度改为按<b>当前标签页</b>的内容自适应（通用/鼠标各约 11 行、键盘 8 行、鼠标坐标 5 行，而聚光灯/放大镜只有 2~3 行），切换标签页时自动重算，短标签页不再继承长标签页的高度而在下方空出一大片；同时不再沿用历史保存的窗口高度（旧值偏矮会压扁属性行，偏高则留下空白）</li>
+          </ul>
+        </section>
+      </div>
+    </article>
+
+    <!-- ================= 2.1.26263.1528 ================= -->
+    <article class="release" id="2-1-26263.1528">
+      <div class="release-card">
+        <div class="release-head">
+          <h2 class="version"><a href="#2-1-26263.1528">2.1.26263.1528</a></h2>
+          <time class="date" datetime="2026-09-20">2026-09-20</time>
+        </div>
+
+        <section class="group" data-cat="changed">
+          <h3 class="group-title">变更</h3>
+          <ul>
+            <li>高 DPI 缩放改为按系统真实比例精确缩放（PassThrough）：Qt 5.14+ 默认把系统缩放四舍五入到整数倍——125% 被取整为 100%（界面按 100% 排版、字体却按 120 DPI 渲染，字号大 25% 而行高跟不上）、150% 被取整为 200%（整个界面放大到两倍），这正是「设置窗口 125% 挤、150% 过大」的根源</li>
+          </ul>
+        </section>
+
+        <section class="group" data-cat="fixed">
+          <h3 class="group-title">修复</h3>
+          <ul>
+            <li>修复「可视化设置」窗口在 100% / 125% 缩放下各属性挤在一起（轻微 / 严重）：每个标签页改为可滚动页、窗口尺寸改以内容自然尺寸为下限，属性行不再被压扁，窗口过小时只出现滚动条</li>
+            <li>修复「可视化设置」窗口在 150% 缩放下窗口偏大：缩放比例不再被放大成 2 倍（见上条），窗口尺寸同时按屏幕可用区夹紧，不再出现超出屏幕或比内容大出一截的情况</li>
+            <li>修复「可视化设置」窗口记忆位置所在的屏幕与当前屏不一致时被拽回主屏（按记忆位置的所在屏取可用区，多屏友好）</li>
+          </ul>
+        </section>
+      </div>
+    </article>
+
+    <!-- ================= 2.1.26263.1323 ================= -->
+    <article class="release" id="2-1-26263.1323">
+      <div class="release-card">
+        <div class="release-head">
+          <h2 class="version"><a href="#2-1-26263.1323">2.1.26263.1323</a></h2>
+          <time class="date" datetime="2026-09-20">2026-09-20</time>
+        </div>
+
+        <section class="group" data-cat="added">
+          <h3 class="group-title">新增</h3>
+          <ul>
+            <li>新增运行中系统缩放（DPI）变化监测：逐屏监听 logicalDotsPerInchChanged / geometryChanged 并辅以 1 秒轮询（指纹含逻辑尺寸与逻辑 DPI），变化后自动重建顶部菜单栏与托盘菜单、把浮动工具栏挪回屏内，并提示「建议立即重启」、支持一键重启（Qt 5.15 无法可靠地热重排已创建的窗口，重启才是可靠兜底）</li>
+            <li>新增 DPI 快照日志（📐 前缀）：启动时与每次缩放变化时记录各屏逻辑尺寸/缩放比/逻辑 DPI、光标逻辑坐标、物理显示器矩形，便于排查显示异常</li>
+            <li>新增 EXE 兼容性「替代高 DPI 缩放行为（系统）」检测：进程被系统锁为 DPI 不感知时启动弹窗提醒取消该勾选（该勾选与程序内缩放叠加即双重缩放，导致模糊/错位；该标志由系统在进程启动时注入，代码侧无法清除）</li>
+            <li>新增「浮动工具栏被系统禁用」的自动恢复（仅 Windows，作为二级保险）：打开程序内对话框期间若浮动工具栏/可视化窗口被系统禁用，立即恢复可点</li>
+          </ul>
+        </section>
+
+        <section class="group" data-cat="fixed">
+          <h3 class="group-title">修复</h3>
+          <ul>
+            <li>修复打开程序内任一对话框（动作管理、方案管理、OCR 设置等）后浮动工具栏/可视化设置点不动：对话框改按「伪模态」处理（去掉 Qt 模态 + 仅锁主窗口），独立顶层窗口保持可点；主窗口仍不可操作，「对话框期间不能操作主窗口」的语义不变，全局快捷键不受影响</li>
+            <li>修复对话框打开时主窗口与对话框一起变灰、对话框无法操作：锁主窗口改用 Win32 层 EnableWindow，不再使用 QWidget.setEnabled（后者会沿父子链把对话框自身一并禁用）</li>
+            <li>修复对话框/提示框显示为白屏空窗：对话框已显示后再调 setWindowModality 会被 Qt 隐藏，改用 setModal(False)；DPI 提示框另外延后到缩放切换结束之后再弹出</li>
+            <li>修复程序运行中改变系统缩放后托盘菜单显示不全、浮动工具栏与可视化效果飘出屏幕（免重启自动适配 + 提示一键重启）</li>
+            <li>修复启动 DPI 快照日志的逐屏信息为空白：部分 PyQt5 未提供 QScreen.devicePixelRatioF，回退 devicePixelRatio；读屏失败改为显性记录而非静默丢弃</li>
+            <li>修复浮动工具栏曾因去掉 Qt.Tool 而在任务栏多出一个窗口（已回退，保持任务栏单窗口）</li>
+            <li>修复 rpa/version.py 自检断言写死旧产品段（BASE_VERSION 升为 2.1 后无参运行必报 AssertionError），改为随 BASE_VERSION 计算</li>
+          </ul>
+        </section>
+      </div>
+    </article>
+
     <!-- ================= 2.1.26262.2153 ================= -->
-    <article class="release is-latest" id="2-1-26262.2153">
+    <article class="release" id="2-1-26262.2153">
       <div class="release-card">
         <div class="release-head">
           <h2 class="version"><a href="#2-1-26262.2153">2.1.26262.2153</a></h2>
           <time class="date" datetime="2026-09-19">2026-09-19</time>
-          <span class="tag-latest">最新</span>
         </div>
 
         <section class="group" data-cat="fixed">

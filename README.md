@@ -5,7 +5,7 @@ Windows 平台 RPA 工具——键盘、鼠标、自动化、调度、OCR 识别
 🌐 **在线主页**：<https://softhubcc.github.io/KeyMouseMateSite/>
 
 [![Platform](https://img.shields.io/badge/platform-Windows%2010%2F11-blue)](https://www.microsoft.com/windows)
-[![Version](https://img.shields.io/badge/version-2.1.26263.1029-green)](https://github.com/SoftHubCC/KeyMouseMateSite/releases)
+[![Version](https://img.shields.io/badge/version-2.1.26263.1554-green)](https://github.com/SoftHubCC/KeyMouseMateSite/releases)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## 📥 下载
@@ -14,8 +14,8 @@ Windows 平台 RPA 工具——键盘、鼠标、自动化、调度、OCR 识别
 
 | 文件 | 说明 |
 |------|------|
-| `KeyMouseMate_installer_v2.1.26263.1029.exe` | 安装版（一键安装） |
-| `KeyMouseMate_portable_v2.1.26263.1029.zip` | 便携版（解压即用） |
+| `KeyMouseMate_installer_v2.1.26263.1554.exe` | 安装版（一键安装） |
+| `KeyMouseMate_portable_v2.1.26263.1554.zip` | 便携版（解压即用） |
 
 ## ✨ 核心功能
 
