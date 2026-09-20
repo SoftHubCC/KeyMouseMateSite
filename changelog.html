@@ -235,13 +235,37 @@
 
   <main class="timeline">
 
+    <!-- ================= 2.1.26262.2153 ================= -->
+    <article class="release is-latest" id="2-1-26262.2153">
+      <div class="release-card">
+        <div class="release-head">
+          <h2 class="version"><a href="#2-1-26262.2153">2.1.26262.2153</a></h2>
+          <time class="date" datetime="2026-09-19">2026-09-19</time>
+          <span class="tag-latest">最新</span>
+        </div>
+
+        <section class="group" data-cat="fixed">
+          <h3 class="group-title">修复</h3>
+          <ul>
+            <li>修复「自动化执行」效果设置中键盘输入提示（文本显示）位置与设置值不符：固定 X/Y（物理像素）直接按逻辑像素绘制，150%/200% 缩放下被画到 X×缩放 处；现与鼠标涟漪/高亮一致，绘制前经 dpiutil 物理→逻辑换算；「跟随光标」分支（QCursor 逻辑坐标）不变</li>
+          </ul>
+        </section>
+
+        <section class="group" data-cat="removed">
+          <h3 class="group-title">移除</h3>
+          <ul>
+            <li>移除启动时的「📐 DPI 诊断」日志（排查混合缩放问题时临时加，根因已定位为 Win7 兼容性设置叠加系统缩放，注释保留于源码备查）</li>
+          </ul>
+        </section>
+      </div>
+    </article>
+
     <!-- ================= 2.1.26261.2149 ================= -->
-    <article class="release is-latest" id="2-1-26261.2149">
+    <article class="release" id="2-1-26261.2149">
       <div class="release-card">
         <div class="release-head">
           <h2 class="version"><a href="#2-1-26261.2149">2.1.26261.2149</a></h2>
           <time class="date" datetime="2026-09-18">2026-09-18</time>
-          <span class="tag-latest">最新</span>
         </div>
 
         <section class="group" data-cat="added">
@@ -1009,7 +1033,7 @@
           <h3 class="group-title">变更</h3>
           <ul>
             <li>更新内嵌支付宝 / 微信收款码图片；收款方名称集中在
-                <code>dev/qr/embed_qr.py</code> 顶部 <code>PAYEE</code> 配置区维护，
+                <code>releases/build-qr/embed_qr.py</code> 顶部 <code>PAYEE</code> 配置区维护，
                 重新生成脚本时自动烙入 <code>rpa/qr_assets.py</code>，留空则界面不显示该行。</li>
           </ul>
         </section>
@@ -1266,13 +1290,13 @@
         <section class="group" data-cat="added">
           <h3 class="group-title">新增</h3>
           <ul>
-            <li>一键双发布包：新增 <code>Releases\build_release.bat</code>，双击一次同时产出
+            <li>一键双发布包：新增 <code>releases\build-release\build_release.bat</code>，双击一次同时产出
                 安装版 <code>KeyMouseMate_installer_v&lt;版本&gt;.exe</code> 与便携版
                 <code>KeyMouseMate_portable_v&lt;版本&gt;.zip</code>（zip 内含顶层
                 <code>KeyMouseMate\</code> 目录，解压不会散架）。</li>
             <li>版本号全链一致：打包时自动把版本号烙进 EXE 同级 <code>VERSION</code> 文件，
                 程序标题显示、安装包命名、便携包命名三者永远同源。</li>
-            <li>ISCC 多路径自动查找：环境变量 → 本机配置 <code>iscc_dirs.txt</code> →
+            <li>ISCC 多路径自动查找：环境变量 → 本机配置 <code>releases/build-release/build_iscc_dirs.txt</code> →
                 Program Files → 注册表 → PATH，绿色版 / 自定义路径的 Inno Setup 也能被找到。</li>
           </ul>
         </section>
@@ -1305,7 +1329,7 @@
             <li>版本号体系：格式 <code>2.0.&lt;年&gt;&lt;年内天&gt;.&lt;时分&gt;</code>，
                 取 <code>rpa/</code> 源码最新修改时间生成，唯一维护点 <code>rpa/version.py</code>；
                 根目录 <code>VERSION</code> 文件记录当前实际版本。</li>
-            <li>一键上传 GitHub：双击 <code>upload_to_github.bat</code> 完成源码仓库提交推送
+            <li>一键上传 GitHub：双击 <code>releases/upload-source/upload_source.bat</code> 完成源码仓库提交推送
                 与发布主页同步（配置驱动，他人克隆后亦可直接使用）。</li>
           </ul>
         </section>
