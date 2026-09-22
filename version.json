@@ -5,5 +5,5 @@
     "portable": "https://github.com/SoftHubCC/KeyMouseMateSite/releases/download/v2.1.26263.1554/KeyMouseMate_portable_v2.1.26263.1554.zip"
   },
   "changelog": "修复「可视化设置」窗口底部留白：窗口高度改为按当前标签页的内容自适应（通用/鼠标各约 11 行、键盘 8 行、鼠标坐标 5 行，而聚光灯/放大镜只有 2~3 行），切换标签页时自动重算，短标签页不再继承长标签页的高度而在下方空出一大片；同时不再沿用历史保存的窗口高度（旧值偏矮会压扁属性行，偏高则留下空白）",
-  "release_date": "2026-09-21"
+  "release_date": "2026-09-22"
 }
