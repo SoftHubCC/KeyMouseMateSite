@@ -929,6 +929,9 @@
 
 <h3>20.5 打包后样式与原版不同</h3>
 <p>这是正常现象，程序已内置 Fusion 样式，确保在任何 Windows 环境下外观一致。</p>
+
+<h3>20.6 启动报「onnxruntime / 动态链接库(DLL)初始化例程失败」</h3>
+<p>多见于 <strong>Windows Server</strong> 或精简版系统：这类系统默认不含 Visual C++ 2015–2022 x64 运行库（<code>msvcp140.dll</code> / <code>vcruntime140.dll</code>），程序加载 onnxruntime / Qt5 时即报此错。处理：安装 <a href="https://aka.ms/vs/17/release/vc_redist.x64.exe" target="_blank" rel="noopener">vc_redist.x64.exe</a>（便携版需手动安装后重启程序）；用<strong>安装版</strong>时勾选「同时安装 Visual C++ 运行库」组件即可自动完成，无需手动。</p>
 </section>
 
 <!-- ===================== 21. 目录结构 ===================== -->

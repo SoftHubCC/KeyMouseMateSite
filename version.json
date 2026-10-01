@@ -1,9 +1,9 @@
 {
-  "version": "2.1.26263.1554",
+  "version": "2.1.26274.0146",
   "download_urls": {
-    "installer": "https://github.com/SoftHubCC/KeyMouseMateSite/releases/download/v2.1.26263.1554/KeyMouseMate_installer_v2.1.26263.1554.exe",
-    "portable": "https://github.com/SoftHubCC/KeyMouseMateSite/releases/download/v2.1.26263.1554/KeyMouseMate_portable_v2.1.26263.1554.zip"
+    "installer": "https://github.com/SoftHubCC/KeyMouseMateSite/releases/download/v2.1.26274.0146/KeyMouseMate_installer_v2.1.26274.0146.exe",
+    "portable": "https://github.com/SoftHubCC/KeyMouseMateSite/releases/download/v2.1.26274.0146/KeyMouseMate_portable_v2.1.26274.0146.zip"
   },
-  "changelog": "修复「可视化设置」窗口底部留白：窗口高度改为按当前标签页的内容自适应（通用/鼠标各约 11 行、键盘 8 行、鼠标坐标 5 行，而聚光灯/放大镜只有 2~3 行），切换标签页时自动重算，短标签页不再继承长标签页的高度而在下方空出一大片；同时不再沿用历史保存的窗口高度（旧值偏矮会压扁属性行，偏高则留下空白）",
-  "release_date": "2026-09-24"
+  "changelog": "修复编辑各类窗口（动作 / 方案 / 节点等弹窗）后，返回的主窗口不处于最顶层、需要再次点击任务栏图标才能重新聚焦的问题：现在关闭弹窗后会自动把所属窗口恢复到前台并聚焦，无需手动切回",
+  "release_date": "2026-10-01"
 }
